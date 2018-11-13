@@ -52,15 +52,19 @@ pop.dtype
 sns.distplot(pop)
 ```
 
+    /anaconda3/lib/python3.6/site-packages/matplotlib/axes/_axes.py:6462: UserWarning: The 'normed' kwarg is deprecated, and has been replaced by the 'density' kwarg.
+      warnings.warn("The 'normed' kwarg is deprecated, and has been "
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x18648fc0780>
+
+
+    <matplotlib.axes._subplots.AxesSubplot at 0x1085d2e48>
 
 
 
 
-![png](index_files/index_5_1.png)
+![png](index_files/index_5_2.png)
 
 
 Lets take two sample from this population and comment of the difference between their and means and standard deviations. How would you ensure the independance between elements of these samples? 
@@ -80,7 +84,7 @@ stats.describe(sample1)
 
 
 
-    DescribeResult(nobs=100, minmax=(48.805213677063804, 150.65090167588255), mean=96.24673360637617, variance=423.20457474058924, skewness=-0.05353301922536613, kurtosis=-0.29302775964422034)
+    DescribeResult(nobs=100, minmax=(42.894352216842066, 147.28560302587476), mean=96.61297543591365, variance=405.5116712908975, skewness=0.23988419345642897, kurtosis=-0.26276760640849295)
 
 
 
@@ -97,7 +101,7 @@ stats.describe(sample2)
 
 
 
-    DescribeResult(nobs=100, minmax=(57.96868014684502, 159.29406605999827), mean=102.76786471724154, variance=420.45658021864733, skewness=0.29145404089799065, kurtosis=0.7249842236748019)
+    DescribeResult(nobs=100, minmax=(49.83527162898597, 154.07785139854766), mean=96.47071308388206, variance=433.7562450962168, skewness=0.17264373338860386, kurtosis=-0.2241136639981094)
 
 
 
@@ -116,7 +120,7 @@ stats.ttest_ind(sample1, sample2)
 
 
 
-    Ttest_indResult(statistic=-2.245116623023133, pvalue=0.02586635243662942)
+    Ttest_indResult(statistic=0.04910657831019071, pvalue=0.9608838604654049)
 
 
 
@@ -130,8 +134,14 @@ plt.show()
 
 ```
 
+    /anaconda3/lib/python3.6/site-packages/matplotlib/axes/_axes.py:6462: UserWarning: The 'normed' kwarg is deprecated, and has been replaced by the 'density' kwarg.
+      warnings.warn("The 'normed' kwarg is deprecated, and has been "
+    /anaconda3/lib/python3.6/site-packages/matplotlib/axes/_axes.py:6462: UserWarning: The 'normed' kwarg is deprecated, and has been replaced by the 'density' kwarg.
+      warnings.warn("The 'normed' kwarg is deprecated, and has been "
 
-![png](index_files/index_11_0.png)
+
+
+![png](index_files/index_11_1.png)
 
 
 ## Simulating Type I and II errors
@@ -235,31 +245,31 @@ sigTests.head()
     <tr>
       <th>1</th>
       <td>0.0</td>
-      <td>0.035702</td>
+      <td>0.455428</td>
       <td>0.001</td>
     </tr>
     <tr>
       <th>2</th>
       <td>0.0</td>
-      <td>0.415147</td>
+      <td>0.730703</td>
       <td>0.010</td>
     </tr>
     <tr>
       <th>3</th>
       <td>0.0</td>
-      <td>0.265434</td>
+      <td>0.431905</td>
       <td>0.050</td>
     </tr>
     <tr>
       <th>4</th>
       <td>0.0</td>
-      <td>0.503467</td>
+      <td>0.202983</td>
       <td>0.100</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.0</td>
-      <td>0.413219</td>
+      <td>1.0</td>
+      <td>0.179599</td>
       <td>0.200</td>
     </tr>
   </tbody>
@@ -280,7 +290,7 @@ group_error.plot.bar(title = "TYPE I ERROR - FALSE POSITIVES")
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x1864c686710>
+    <matplotlib.axes._subplots.AxesSubplot at 0x1a14872748>
 
 
 
@@ -342,7 +352,7 @@ group_error2.plot.bar(title = "Type II ERROR - FALSE NEGATIVES")
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x1864c6ce7b8>
+    <matplotlib.axes._subplots.AxesSubplot at 0x1a148dc358>
 
 
 
